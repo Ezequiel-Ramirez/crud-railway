@@ -148,7 +148,7 @@ io.on("connection", async (socket) => {
 
 //PORT
 const argv = parseArgs(process.argv.slice(2)).argv
-const PORT = argv.PORT || 8080
+const PORT = process.env.PORT || 8080
 const MODE = argv.MODE || 'FORK'
 const numCPUs = require('os').cpus().length
 
